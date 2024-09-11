@@ -1,0 +1,323 @@
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(LeagueSpartan.ttf);
+}
+
+body {
+    font-family: LeagueSpartan;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A4663;
+}
+
+#display {
+    background-color: #181F33;
+    border-radius: 10px;
+    text-align: right;
+    font-weight: bold;
+    color: white;
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+#keys-c-container {
+    background-color: #242D44;
+    border-radius: 10px;
+}
+
+#keys-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.long-key {
+    grid-column: span 2 / span 2;
+}
+
+.key {
+    border-radius: 10px;
+    border: 0;
+    border-bottom: 4px solid;
+    height: 64px;
+}
+
+
+.primary-key {
+    background-color: #EAE3DC;
+    border-color: #B3A497;
+    color: #434A59;
+    font-weight: bold;
+}
+
+/*.primary-key:active {*/
+/*    background-color: #FFFFFF;*/
+/*}*/
+
+.secondary-key {
+    background-color: #647198;
+    border-color: #414E73;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*.secondary-key:active {*/
+/*    background-color: #A2B2E1;*/
+/*}*/
+
+.unique-key {
+    background-color: #D03F2F;
+    border-color: #93261A;
+    color: white;
+    font-weight: bold;
+}
+
+/*.unique-key:active {*/
+/*    background-color: #F96B5B;*/
+/*}*/
+
+#top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#logo {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: -0.53px;
+    line-height: 29px;
+    margin-bottom: 1px;
+}
+
+#theme-switch-and-text-container {
+    display: flex;
+    gap: 26px;
+    align-items: end;
+}
+
+#theme-text {
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+#theme-switch-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#theme-switch-numbers {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#theme-switch-numbers div {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 13px;
+    width: 13px;
+    text-align: center;
+}
+
+#theme-switch {
+    border-radius: 13px;
+    width: 71px;
+    height: 26px;
+    background-color: #242D44;
+    position: relative;
+}
+
+#theme-switch-ball {
+    background-color: #D03F2F;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+@media (min-width: 640px) {
+    #calculator-container {
+        width: 540px;
+        height: 708px;
+    }
+
+    #display {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 40px;
+        padding-bottom: 36px;
+        letter-spacing: -0.93px;
+        font-size: 56px;
+        line-height: 52px;
+    }
+
+    #keys-c-container {
+        padding: 32px;
+    }
+
+    #keys-container {
+        gap: 24px;
+        height: 416px;
+    }
+
+    .primary-key {
+        font-size: 40px;
+        letter-spacing: -0.67px;
+        line-height: 37px;
+    }
+
+    .secondary-key {
+        font-size: 28px;
+        letter-spacing: -0.47px;
+        line-height: 26px;
+    }
+
+    .unique-key {
+        font-size: 28px;
+        letter-spacing: -0.47px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 640px) {
+    #calculator-container {
+        width: calc(100dvw - 48px);
+        height: calc(100dvh - 60px);
+    }
+
+    #display {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 29px;
+        padding-bottom: 22px;
+        letter-spacing: -0.67px;
+        font-size: 40px;
+        line-height: 37px;
+    }
+
+    #keys-c-container {
+        padding: 24px;
+    }
+
+    #keys-container {
+        gap: 13px;
+        height: 372px;
+    }
+
+    .primary-key {
+        font-size: 32px;
+        letter-spacing: -0.53px;
+        line-height: 29px;
+    }
+
+    .secondary-key {
+        font-size: 20px;
+        letter-spacing: -0.33px;
+        line-height: 18px;
+    }
+
+    .unique-key {
+        font-size: 20px;
+        letter-spacing: -0.33px;
+        line-height: 18px;
+    }
+}
+
+.key:focus {
+    outline: none;
+}
+
+.theme-1 .primary-key:active {
+    background-color: #FFFFFE;
+}
+.theme-1 .secondary-key:active {
+    background-color: #A2B2E1;
+}
+.theme-1 .unique-key:active {
+    background-color: #F96B5B;
+}
+
+.theme-2 .primary-key:active {
+    background-color: #FFFFFF;
+}
+.theme-2 .secondary-key:active {
+    background-color: #62B5BC;
+}
+.theme-2 .unique-key:active {
+    background-color: #FF8A38;
+}
+
+.theme-3 .primary-key:active {
+    background-color: #6C34AC;
+}
+.theme-3 .secondary-key:active {
+    background-color: #8631AF;
+}
+.theme-3 .unique-key:active {
+    background-color: #93FFF8;
+}
+
+.theme-1 .primary-key {
+    color: #434A59;
+    background-color: #EAE3DC;
+    border-color: #B3A497;
+}
+.theme-1 .secondary-key {
+    color: #ffffff;
+    background-color: #647198;
+    border-color: #414E73;
+}
+.theme-1 .unique-key {
+    color: #ffffff;
+    background-color: #D03F2F;
+    border-color: #93261A;
+}
+
+.theme-2 .primary-key {
+    color: #36362C;
+    background-color: #E5E4E1;
+    border-color: #A79E91;
+}
+.theme-2 .secondary-key {
+    color: #ffffff;
+    background-color: #378187;
+    border-color: #1B6066;
+}
+.theme-2 .unique-key {
+    color: #ffffff;
+    background-color: #C85402;
+    border-color: #873901;
+}
+
+.theme-3 .primary-key {
+    color: #FFE53D;
+    background-color: #331C4D;
+    border-color: #881C9E;
+}
+.theme-3 .secondary-key {
+    color: #ffffff;
+    background-color: #56077C;
+    border-color: #BE15F4;
+}
+.theme-3 .unique-key {
+    color: #1A2327;
+    background-color: #00DED0;
+    border-color: #6CF9F1;
+}
+
+/* why i had to fix the height to 64, fix it */
+/* hover and press */
